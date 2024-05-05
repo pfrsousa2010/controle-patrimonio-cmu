@@ -111,6 +111,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               'patrimonyId',
               ParamType.int,
             ),
+            patrimonyDescription: params.getParam(
+              'patrimonyDescription',
+              ParamType.String,
+            ),
           ),
         ),
         FFRoute(

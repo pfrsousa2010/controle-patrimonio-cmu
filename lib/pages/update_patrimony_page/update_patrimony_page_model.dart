@@ -1,5 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'update_patrimony_page_widget.dart' show UpdatePatrimonyPageWidget;
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,12 @@ class UpdatePatrimonyPageModel
   FocusNode? textFieldFocusNode7;
   TextEditingController? textController7;
   String? Function(BuildContext, String?)? textController7Validator;
+  // State field(s) for DropDown widget.
+  String? dropDownValue1;
+  FormFieldController<String>? dropDownValueController1;
+  // State field(s) for DropDown widget.
+  String? dropDownValue2;
+  FormFieldController<String>? dropDownValueController2;
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode8;
   TextEditingController? textController8;
@@ -44,6 +51,22 @@ class UpdatePatrimonyPageModel
   FocusNode? textFieldFocusNode9;
   TextEditingController? textController9;
   String? Function(BuildContext, String?)? textController9Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode10;
+  TextEditingController? textController10;
+  String? Function(BuildContext, String?)? textController10Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode11;
+  TextEditingController? textController11;
+  String? Function(BuildContext, String?)? textController11Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode12;
+  TextEditingController? textController12;
+  String? Function(BuildContext, String?)? textController12Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode13;
+  TextEditingController? textController13;
+  String? Function(BuildContext, String?)? textController13Validator;
   // Stores action output result for [Backend Call - API (updatePatrimony)] action in Button widget.
   ApiCallResponse? postResult;
 
@@ -79,5 +102,17 @@ class UpdatePatrimonyPageModel
 
     textFieldFocusNode9?.dispose();
     textController9?.dispose();
+
+    textFieldFocusNode10?.dispose();
+    textController10?.dispose();
+
+    textFieldFocusNode11?.dispose();
+    textController11?.dispose();
+
+    textFieldFocusNode12?.dispose();
+    textController12?.dispose();
+
+    textFieldFocusNode13?.dispose();
+    textController13?.dispose();
   }
 }

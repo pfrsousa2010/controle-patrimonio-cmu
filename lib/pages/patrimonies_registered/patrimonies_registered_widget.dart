@@ -255,7 +255,7 @@ class _PatrimoniesRegisteredWidgetState
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 0.0),
                   child: FutureBuilder<ApiCallResponse>(
                     future: GetPatrimoniesCall.call(),
                     builder: (context, snapshot) {
@@ -292,7 +292,7 @@ class _PatrimoniesRegisteredWidgetState
                                   varPatrimonies[varPatrimoniesIndex];
                               return Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 1.0),
+                                    5.0, 0.0, 5.0, 1.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
                                   focusColor: Colors.transparent,
@@ -309,95 +309,94 @@ class _PatrimoniesRegisteredWidgetState
                                       }.withoutNulls,
                                     );
                                   },
-                                  child: Container(
-                                    width: 100.0,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 0.0,
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
-                                          offset: const Offset(
-                                            0.0,
-                                            1.0,
-                                          ),
-                                        )
-                                      ],
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    elevation: 2.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.0),
                                     ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Expanded(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          12.0, 0.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    varPatrimoniesItem
-                                                        .descricao,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyLarge
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                    child: Container(
+                                      width: 100.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(12.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      varPatrimoniesItem
+                                                          .descricao,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyLarge
+                                                          .override(
+                                                            fontFamily:
+                                                                'Readex Pro',
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                    ),
                                                   ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          12.0, 0.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    varPatrimoniesItem
-                                                        .numeroPatrimonio
-                                                        .toString(),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(12.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      varPatrimoniesItem
+                                                          .numeroPatrimonio
+                                                          .toString(),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .labelMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Readex Pro',
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Card(
-                                            clipBehavior:
-                                                Clip.antiAliasWithSaveLayer,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            elevation: 1.0,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(40.0),
-                                            ),
-                                            child: Padding(
-                                              padding: const EdgeInsets.all(4.0),
-                                              child: Icon(
-                                                Icons
-                                                    .keyboard_arrow_right_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 24.0,
+                                                ].divide(
+                                                    const SizedBox(height: 10.0)),
                                               ),
                                             ),
-                                          ),
-                                        ],
+                                            Card(
+                                              clipBehavior:
+                                                  Clip.antiAliasWithSaveLayer,
+                                              elevation: 1.0,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(40.0),
+                                              ),
+                                              child: Padding(
+                                                padding: const EdgeInsets.all(4.0),
+                                                child: Icon(
+                                                  Icons
+                                                      .keyboard_arrow_right_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  size: 24.0,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),

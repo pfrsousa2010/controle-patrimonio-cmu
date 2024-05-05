@@ -8,24 +8,38 @@ import '/flutter_flow/flutter_flow_util.dart';
 class PatrimonyStruct extends BaseStruct {
   PatrimonyStruct({
     int? numeroPatrimonio,
-    String? detentor,
+    String? unidade,
     String? descricao,
+    String? capacidade,
+    String? cor,
     String? fabricante,
     String? numeroSerie,
     String? modelo,
     String? localizacao,
+    String? origem,
+    String? inalienavel,
+    String? documento,
     String? rastreador,
-    String? situacao,
+    String? condicoesItem,
+    String? voltagem,
+    String? detentor,
     int? id,
   })  : _numeroPatrimonio = numeroPatrimonio,
-        _detentor = detentor,
+        _unidade = unidade,
         _descricao = descricao,
+        _capacidade = capacidade,
+        _cor = cor,
         _fabricante = fabricante,
         _numeroSerie = numeroSerie,
         _modelo = modelo,
         _localizacao = localizacao,
+        _origem = origem,
+        _inalienavel = inalienavel,
+        _documento = documento,
         _rastreador = rastreador,
-        _situacao = situacao,
+        _condicoesItem = condicoesItem,
+        _voltagem = voltagem,
+        _detentor = detentor,
         _id = id;
 
   // "numeroPatrimonio" field.
@@ -36,17 +50,29 @@ class PatrimonyStruct extends BaseStruct {
       _numeroPatrimonio = numeroPatrimonio + amount;
   bool hasNumeroPatrimonio() => _numeroPatrimonio != null;
 
-  // "detentor" field.
-  String? _detentor;
-  String get detentor => _detentor ?? '';
-  set detentor(String? val) => _detentor = val;
-  bool hasDetentor() => _detentor != null;
+  // "unidade" field.
+  String? _unidade;
+  String get unidade => _unidade ?? '';
+  set unidade(String? val) => _unidade = val;
+  bool hasUnidade() => _unidade != null;
 
   // "descricao" field.
   String? _descricao;
   String get descricao => _descricao ?? '';
   set descricao(String? val) => _descricao = val;
   bool hasDescricao() => _descricao != null;
+
+  // "capacidade" field.
+  String? _capacidade;
+  String get capacidade => _capacidade ?? '';
+  set capacidade(String? val) => _capacidade = val;
+  bool hasCapacidade() => _capacidade != null;
+
+  // "cor" field.
+  String? _cor;
+  String get cor => _cor ?? '';
+  set cor(String? val) => _cor = val;
+  bool hasCor() => _cor != null;
 
   // "fabricante" field.
   String? _fabricante;
@@ -72,17 +98,47 @@ class PatrimonyStruct extends BaseStruct {
   set localizacao(String? val) => _localizacao = val;
   bool hasLocalizacao() => _localizacao != null;
 
+  // "origem" field.
+  String? _origem;
+  String get origem => _origem ?? '';
+  set origem(String? val) => _origem = val;
+  bool hasOrigem() => _origem != null;
+
+  // "inalienavel" field.
+  String? _inalienavel;
+  String get inalienavel => _inalienavel ?? '';
+  set inalienavel(String? val) => _inalienavel = val;
+  bool hasInalienavel() => _inalienavel != null;
+
+  // "documento" field.
+  String? _documento;
+  String get documento => _documento ?? '';
+  set documento(String? val) => _documento = val;
+  bool hasDocumento() => _documento != null;
+
   // "rastreador" field.
   String? _rastreador;
   String get rastreador => _rastreador ?? '';
   set rastreador(String? val) => _rastreador = val;
   bool hasRastreador() => _rastreador != null;
 
-  // "situacao" field.
-  String? _situacao;
-  String get situacao => _situacao ?? '';
-  set situacao(String? val) => _situacao = val;
-  bool hasSituacao() => _situacao != null;
+  // "condicoesItem" field.
+  String? _condicoesItem;
+  String get condicoesItem => _condicoesItem ?? '';
+  set condicoesItem(String? val) => _condicoesItem = val;
+  bool hasCondicoesItem() => _condicoesItem != null;
+
+  // "voltagem" field.
+  String? _voltagem;
+  String get voltagem => _voltagem ?? '';
+  set voltagem(String? val) => _voltagem = val;
+  bool hasVoltagem() => _voltagem != null;
+
+  // "detentor" field.
+  String? _detentor;
+  String get detentor => _detentor ?? '';
+  set detentor(String? val) => _detentor = val;
+  bool hasDetentor() => _detentor != null;
 
   // "id" field.
   int? _id;
@@ -93,14 +149,21 @@ class PatrimonyStruct extends BaseStruct {
 
   static PatrimonyStruct fromMap(Map<String, dynamic> data) => PatrimonyStruct(
         numeroPatrimonio: castToType<int>(data['numeroPatrimonio']),
-        detentor: data['detentor'] as String?,
+        unidade: data['unidade'] as String?,
         descricao: data['descricao'] as String?,
+        capacidade: data['capacidade'] as String?,
+        cor: data['cor'] as String?,
         fabricante: data['fabricante'] as String?,
         numeroSerie: data['numeroSerie'] as String?,
         modelo: data['modelo'] as String?,
         localizacao: data['localizacao'] as String?,
+        origem: data['origem'] as String?,
+        inalienavel: data['inalienavel'] as String?,
+        documento: data['documento'] as String?,
         rastreador: data['rastreador'] as String?,
-        situacao: data['situacao'] as String?,
+        condicoesItem: data['condicoesItem'] as String?,
+        voltagem: data['voltagem'] as String?,
+        detentor: data['detentor'] as String?,
         id: castToType<int>(data['id']),
       );
 
@@ -110,14 +173,21 @@ class PatrimonyStruct extends BaseStruct {
 
   Map<String, dynamic> toMap() => {
         'numeroPatrimonio': _numeroPatrimonio,
-        'detentor': _detentor,
+        'unidade': _unidade,
         'descricao': _descricao,
+        'capacidade': _capacidade,
+        'cor': _cor,
         'fabricante': _fabricante,
         'numeroSerie': _numeroSerie,
         'modelo': _modelo,
         'localizacao': _localizacao,
+        'origem': _origem,
+        'inalienavel': _inalienavel,
+        'documento': _documento,
         'rastreador': _rastreador,
-        'situacao': _situacao,
+        'condicoesItem': _condicoesItem,
+        'voltagem': _voltagem,
+        'detentor': _detentor,
         'id': _id,
       }.withoutNulls;
 
@@ -127,12 +197,20 @@ class PatrimonyStruct extends BaseStruct {
           _numeroPatrimonio,
           ParamType.int,
         ),
-        'detentor': serializeParam(
-          _detentor,
+        'unidade': serializeParam(
+          _unidade,
           ParamType.String,
         ),
         'descricao': serializeParam(
           _descricao,
+          ParamType.String,
+        ),
+        'capacidade': serializeParam(
+          _capacidade,
+          ParamType.String,
+        ),
+        'cor': serializeParam(
+          _cor,
           ParamType.String,
         ),
         'fabricante': serializeParam(
@@ -151,12 +229,32 @@ class PatrimonyStruct extends BaseStruct {
           _localizacao,
           ParamType.String,
         ),
+        'origem': serializeParam(
+          _origem,
+          ParamType.String,
+        ),
+        'inalienavel': serializeParam(
+          _inalienavel,
+          ParamType.String,
+        ),
+        'documento': serializeParam(
+          _documento,
+          ParamType.String,
+        ),
         'rastreador': serializeParam(
           _rastreador,
           ParamType.String,
         ),
-        'situacao': serializeParam(
-          _situacao,
+        'condicoesItem': serializeParam(
+          _condicoesItem,
+          ParamType.String,
+        ),
+        'voltagem': serializeParam(
+          _voltagem,
+          ParamType.String,
+        ),
+        'detentor': serializeParam(
+          _detentor,
           ParamType.String,
         ),
         'id': serializeParam(
@@ -172,13 +270,23 @@ class PatrimonyStruct extends BaseStruct {
           ParamType.int,
           false,
         ),
-        detentor: deserializeParam(
-          data['detentor'],
+        unidade: deserializeParam(
+          data['unidade'],
           ParamType.String,
           false,
         ),
         descricao: deserializeParam(
           data['descricao'],
+          ParamType.String,
+          false,
+        ),
+        capacidade: deserializeParam(
+          data['capacidade'],
+          ParamType.String,
+          false,
+        ),
+        cor: deserializeParam(
+          data['cor'],
           ParamType.String,
           false,
         ),
@@ -202,13 +310,38 @@ class PatrimonyStruct extends BaseStruct {
           ParamType.String,
           false,
         ),
+        origem: deserializeParam(
+          data['origem'],
+          ParamType.String,
+          false,
+        ),
+        inalienavel: deserializeParam(
+          data['inalienavel'],
+          ParamType.String,
+          false,
+        ),
+        documento: deserializeParam(
+          data['documento'],
+          ParamType.String,
+          false,
+        ),
         rastreador: deserializeParam(
           data['rastreador'],
           ParamType.String,
           false,
         ),
-        situacao: deserializeParam(
-          data['situacao'],
+        condicoesItem: deserializeParam(
+          data['condicoesItem'],
+          ParamType.String,
+          false,
+        ),
+        voltagem: deserializeParam(
+          data['voltagem'],
+          ParamType.String,
+          false,
+        ),
+        detentor: deserializeParam(
+          data['detentor'],
           ParamType.String,
           false,
         ),
@@ -226,53 +359,81 @@ class PatrimonyStruct extends BaseStruct {
   bool operator ==(Object other) {
     return other is PatrimonyStruct &&
         numeroPatrimonio == other.numeroPatrimonio &&
-        detentor == other.detentor &&
+        unidade == other.unidade &&
         descricao == other.descricao &&
+        capacidade == other.capacidade &&
+        cor == other.cor &&
         fabricante == other.fabricante &&
         numeroSerie == other.numeroSerie &&
         modelo == other.modelo &&
         localizacao == other.localizacao &&
+        origem == other.origem &&
+        inalienavel == other.inalienavel &&
+        documento == other.documento &&
         rastreador == other.rastreador &&
-        situacao == other.situacao &&
+        condicoesItem == other.condicoesItem &&
+        voltagem == other.voltagem &&
+        detentor == other.detentor &&
         id == other.id;
   }
 
   @override
   int get hashCode => const ListEquality().hash([
         numeroPatrimonio,
-        detentor,
+        unidade,
         descricao,
+        capacidade,
+        cor,
         fabricante,
         numeroSerie,
         modelo,
         localizacao,
+        origem,
+        inalienavel,
+        documento,
         rastreador,
-        situacao,
+        condicoesItem,
+        voltagem,
+        detentor,
         id
       ]);
 }
 
 PatrimonyStruct createPatrimonyStruct({
   int? numeroPatrimonio,
-  String? detentor,
+  String? unidade,
   String? descricao,
+  String? capacidade,
+  String? cor,
   String? fabricante,
   String? numeroSerie,
   String? modelo,
   String? localizacao,
+  String? origem,
+  String? inalienavel,
+  String? documento,
   String? rastreador,
-  String? situacao,
+  String? condicoesItem,
+  String? voltagem,
+  String? detentor,
   int? id,
 }) =>
     PatrimonyStruct(
       numeroPatrimonio: numeroPatrimonio,
-      detentor: detentor,
+      unidade: unidade,
       descricao: descricao,
+      capacidade: capacidade,
+      cor: cor,
       fabricante: fabricante,
       numeroSerie: numeroSerie,
       modelo: modelo,
       localizacao: localizacao,
+      origem: origem,
+      inalienavel: inalienavel,
+      documento: documento,
       rastreador: rastreador,
-      situacao: situacao,
+      condicoesItem: condicoesItem,
+      voltagem: voltagem,
+      detentor: detentor,
       id: id,
     );

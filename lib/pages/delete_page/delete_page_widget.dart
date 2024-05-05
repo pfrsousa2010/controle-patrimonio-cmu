@@ -13,10 +13,12 @@ class DeletePageWidget extends StatefulWidget {
     super.key,
     required this.patrimonyNumberDelete,
     required this.patrimonyId,
+    required this.patrimonyDescription,
   });
 
   final int? patrimonyNumberDelete;
   final int? patrimonyId;
+  final String? patrimonyDescription;
 
   @override
   State<DeletePageWidget> createState() => _DeletePageWidgetState();
@@ -138,6 +140,40 @@ class _DeletePageWidgetState extends State<DeletePageWidget>
           ),
         ],
       ),
+      'textOnPageLoadAnimation3': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 100.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 300.0.ms,
+            begin: const Offset(0.8, 0.8),
+            end: const Offset(1.0, 1.0),
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 300.0.ms,
+            begin: const Offset(0, 1.396),
+            end: const Offset(0, 0),
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 300.0.ms,
+            begin: const Offset(0.0, 40.0),
+            end: const Offset(0.0, 0.0),
+          ),
+        ],
+      ),
       'containerOnPageLoadAnimation2': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
@@ -185,7 +221,7 @@ class _DeletePageWidgetState extends State<DeletePageWidget>
           ),
         ],
       ),
-      'textOnPageLoadAnimation3': AnimationInfo(
+      'textOnPageLoadAnimation4': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           VisibilityEffect(duration: 100.ms),
@@ -386,6 +422,28 @@ class _DeletePageWidgetState extends State<DeletePageWidget>
                                       'textOnPageLoadAnimation2']!),
                                 ),
                               ),
+                              Align(
+                                alignment: const AlignmentDirectional(0.0, -1.0),
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 10.0, 0.0, 10.0),
+                                  child: Text(
+                                    valueOrDefault<String>(
+                                      widget.patrimonyDescription,
+                                      'Descrição do patrimônio',
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .displaySmall
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          fontSize: 20.0,
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ).animateOnPageLoad(animationsMap[
+                                      'textOnPageLoadAnimation3']!),
+                                ),
+                              ),
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
@@ -572,7 +630,7 @@ class _DeletePageWidgetState extends State<DeletePageWidget>
                                         letterSpacing: 0.0,
                                       ),
                                 ).animateOnPageLoad(
-                                    animationsMap['textOnPageLoadAnimation3']!),
+                                    animationsMap['textOnPageLoadAnimation4']!),
                               ),
                             ].divide(const SizedBox(height: 8.0)),
                           ),

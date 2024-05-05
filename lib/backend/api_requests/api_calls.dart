@@ -13,7 +13,7 @@ class GetPatrimoniesCall {
     return ApiManager.instance.makeApiCall(
       callName: 'getPatrimonies',
       apiUrl:
-          'https://api.sheety.co/951fd9743fc81ac60241d28e2fbfae21/patrimonios/patrimonios',
+          'https://api.sheety.co/951fd9743fc81ac60241d28e2fbfae21/clubeDasMaesUnidas/dados',
       callType: ApiCallType.GET,
       headers: {
         'Content-Type': 'application/json',
@@ -27,21 +27,21 @@ class GetPatrimoniesCall {
     );
   }
 
+  static PatrimoniesStruct? patrimoniesObj(dynamic response) =>
+      PatrimoniesStruct.maybeFromMap(getJsonField(
+        response,
+        r'''$''',
+      ));
   static List<PatrimonyStruct>? patrimoniesList(dynamic response) =>
       (getJsonField(
         response,
-        r'''$.patrimonios''',
+        r'''$.dados''',
         true,
       ) as List?)
           ?.withoutNulls
           .map((x) => PatrimonyStruct.maybeFromMap(x))
           .withoutNulls
           .toList();
-  static PatrimoniesStruct? patrimoniesObj(dynamic response) =>
-      PatrimoniesStruct.maybeFromMap(getJsonField(
-        response,
-        r'''$''',
-      ));
 }
 
 class SavePatrimonyCall {
@@ -53,7 +53,7 @@ $newVariable''';
     return ApiManager.instance.makeApiCall(
       callName: 'savePatrimony',
       apiUrl:
-          'https://api.sheety.co/951fd9743fc81ac60241d28e2fbfae21/patrimonios/patrimonios',
+          'https://api.sheety.co/951fd9743fc81ac60241d28e2fbfae21/clubeDasMaesUnidas/dados',
       callType: ApiCallType.POST,
       headers: {
         'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ $patrimonyJson''';
     return ApiManager.instance.makeApiCall(
       callName: 'updatePatrimony',
       apiUrl:
-          'https://api.sheety.co/951fd9743fc81ac60241d28e2fbfae21/patrimonios/patrimonios/$patrimonyId',
+          'https://api.sheety.co/951fd9743fc81ac60241d28e2fbfae21/clubeDasMaesUnidas/dados/$patrimonyId',
       callType: ApiCallType.PUT,
       headers: {
         'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ class DeletePatrimonyCall {
     return ApiManager.instance.makeApiCall(
       callName: 'deletePatrimony',
       apiUrl:
-          'https://api.sheety.co/951fd9743fc81ac60241d28e2fbfae21/patrimonios/patrimonios/$idRowToDelete',
+          'https://api.sheety.co/951fd9743fc81ac60241d28e2fbfae21/clubeDasMaesUnidas/dados/$idRowToDelete',
       callType: ApiCallType.DELETE,
       headers: {
         'access-control-allow-headers':

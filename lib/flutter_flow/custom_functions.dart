@@ -26,27 +26,39 @@ List<PatrimonyStruct> findPatrimony(
 }
 
 dynamic createPatrimonyJson(
-  int patrimonyNumber,
-  String? holder,
-  String? description,
-  String? manufactor,
-  String? serialNumber,
-  String? model,
-  String? location,
-  String? tracker,
-  String? situation,
+  int numeroPatrimonio,
+  String? detentor,
+  String? descricao,
+  String? fabricante,
+  String? numeroSerie,
+  String? modelo,
+  String? localizacao,
+  String? capacidade,
+  String? unidade,
+  String? cor,
+  String? voltagem,
+  String? origem,
+  String? inalienavel,
+  String? documento,
+  String? condicoesItem,
 ) {
   final Map<String, dynamic> data = {
-    "patrimonio": {
-      "numeroPatrimonio": patrimonyNumber,
-      "detentor": holder,
-      "descricao": description,
-      "fabricante": manufactor,
-      "numeroSerie": serialNumber,
-      "modelo": model,
-      "localizacao": location,
-      "rastreador": tracker,
-      "situacao": situation,
+    "dado": {
+      "numeroPatrimonio": numeroPatrimonio,
+      "detentor": detentor,
+      "descricao": descricao,
+      "fabricante": fabricante,
+      "numeroSerie": numeroSerie,
+      "modelo": modelo,
+      "localizacao": localizacao,
+      "capacidade": capacidade,
+      "unidade": unidade,
+      "cor": cor,
+      "voltagem": voltagem,
+      "origem": origem,
+      "inalienavel": inalienavel,
+      "documento": documento,
+      "condicoesItem": condicoesItem
     }
   };
 

@@ -9,6 +9,14 @@ class RegisterPatrimonyPageModel
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for PageView widget.
+  PageController? pageViewController;
+
+  int get pageViewCurrentIndex => pageViewController != null &&
+          pageViewController!.hasClients &&
+          pageViewController!.page != null
+      ? pageViewController!.page!.round()
+      : 0;
   // State field(s) for patrimonyNumberField widget.
   FocusNode? patrimonyNumberFieldFocusNode;
   TextEditingController? patrimonyNumberFieldTextController;
@@ -61,6 +69,14 @@ class RegisterPatrimonyPageModel
   FocusNode? textFieldFocusNode10;
   TextEditingController? textController11;
   String? Function(BuildContext, String?)? textController11Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode11;
+  TextEditingController? textController12;
+  String? Function(BuildContext, String?)? textController12Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode12;
+  TextEditingController? textController13;
+  String? Function(BuildContext, String?)? textController13Validator;
   // Stores action output result for [Backend Call - API (savePatrimony)] action in Button widget.
   ApiCallResponse? postResult;
 
@@ -102,5 +118,11 @@ class RegisterPatrimonyPageModel
 
     textFieldFocusNode10?.dispose();
     textController11?.dispose();
+
+    textFieldFocusNode11?.dispose();
+    textController12?.dispose();
+
+    textFieldFocusNode12?.dispose();
+    textController13?.dispose();
   }
 }
